@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Interface Example</title>
+    <script src="/static/script.js"></script>
+</head>
+
+<body>
+    <h1>Изберете начин на плаќање</h1>
+    <form method="POST">
+        <button name="payment" value="card">Плати со Картичка</button>
+        <button name="payment" value="cash">Плати со Кеш</button>
+        <button name="payment" value="paypal">Плати со PayPal</button>
+    </form>
+
+    {{ if .Result }}
+    <h2>Резултат:</h2>
+    <p>{{ .Result }}</p>
+    {{ end }}
+</body>
+
+</html>
